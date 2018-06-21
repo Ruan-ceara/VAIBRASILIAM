@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif');
+body{
+  margin: 0;
+  background-color: rgba(0,0,173,0.8);
+}
+#logo{
+  float: left;
+  height: 118.5px;
+  width: 90px;
+}
+#vai-brasiliam{
+  float: right;
+  color: green;
+  font-size: 48px;
+  padding-right: 20px;
+  text-shadow: blue 1px 1px;
+}
+header{
+  background-color:rgba(230,255,0,1);
+  height: 125px;
+  padding-top: 0px;
+  font-family: 'Bree Serif', serif;
+  position: fixed; top: 0px; left: 0px; right: 0px;
+  border: 2px solid green;
+}
+header p{
+  text-align: center;
+  color: green;
+  font-size: 30px;
+  position: relative; top: 25px;
+}
+main{
+  margin-top: 125px;
+  font-family: 'Bree Serif', serif;
+  color: white;
+  padding-left: 5px;
+}
+.expansao{
+  background-color: buttonface;
+  display: inline;
+  cursor: pointer;
+  border: 2px solid black;
+}
+h3 span{
+  padding-left: 5px;
+}
+.jogadores img{
+  width: 7.7%; height: 10%; max-height: 180px;
+  border: 2px solid green;
+  margin-right: 5px;
+}
