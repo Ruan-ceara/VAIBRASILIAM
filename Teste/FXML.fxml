@@ -5,9 +5,9 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Teste.TableController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="611.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Teste.TableController">
    <children>
-      <TableView fx:id="table" layoutX="8.0" layoutY="17.0" prefHeight="366.0" prefWidth="585.0" style="-fx-border-color: #ffffff;" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <TableView fx:id="table" layoutX="100.0" layoutY="103.0" prefHeight="470.0" prefWidth="480.0" style="-fx-border-color: #ffffff;" stylesheets="@style.css" AnchorPane.bottomAnchor="48.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="93.0">
          <columns>
             <TableColumn fx:id="col_id" prefWidth="75.0" text="id" />
             <TableColumn fx:id="col_idDepto" prefWidth="75.0" text="id-depto" />
@@ -16,6 +16,7 @@
             <TableColumn fx:id="col_modalidade" prefWidth="155.0" text="modalidade" />
          </columns>
       </TableView>
+      <ComboBox fx:id="cbFuncoes" layoutX="225.0" layoutY="30.0" prefWidth="150.0" promptText="Inserir" />
    </children>
    <padding>
       <Insets bottom="10.0" left="30.0" right="10.0" top="10.0" />

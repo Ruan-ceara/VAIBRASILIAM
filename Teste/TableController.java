@@ -9,6 +9,8 @@ import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -16,6 +18,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -26,6 +29,8 @@ import javafx.scene.control.cell.PropertyValueFactory;
  */
 public class TableController implements Initializable{
 
+    @FXML
+    private ComboBox<Funcoes> cbFuncoes;
     @FXML
     private TableView<ModelTable> table;
     @FXML
@@ -40,10 +45,13 @@ public class TableController implements Initializable{
     private TableColumn<ModelTable, String> col_modalidade;
 
     ObservableList<ModelTable> oblist = FXCollections.observableArrayList();
-   
+    
+    private List<Funcoes> funcoes = new ArrayList<>();
+
+    private ObservableList<Funcoes> obsFuncoes;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        
+        carregaFuncao();
         try {
             Connection con = DbConnector.getConnection();
             
@@ -65,6 +73,21 @@ public class TableController implements Initializable{
         
         
         table.setItems(oblist);
+        
+    }
+    public void carregaFuncao(){
+        Funcoes ins = new Funcoes(1,"Inserir");
+        Funcoes del = new Funcoes(2,"Deletar");
+        Funcoes alt = new Funcoes(3,"Alterar");
+        Funcoes cons = new Funcoes(4,"Consultar");
+        
+        
+        funcoes.add(ins);
+        funcoes.add(del);
+        funcoes.add(alt);
+        funcoes.add(cons);
+        obsFuncoes = FXCollections.observableArrayList(funcoes);
+        cbFuncoes.setItems(obsFuncoes);
         
     }
     
